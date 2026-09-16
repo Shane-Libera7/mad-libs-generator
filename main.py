@@ -1,25 +1,22 @@
-#Story Template decision for User 
-
-
-def story_template(choice):
-    choice = input("Choose your story Template:   " \
-"A) Superhero Story " \
-"B) Football Story " \
-"C) Space Adventure " \
-"D) Haunted House ")
-    #Return Selected template 
-    return chosen_template 
+# Story template choice – function should return variable called chosen_template, 
+# string of the template chosen which will be referred to the rest of the code. 
+# To dictate sentence formation and word input
 
 
 
 
-#Validate input 
-def validate_input():
-    #Ask fopr input 
-    #Validate
-    #Return clean word 
-    return word 
+# Input Validation () - function will validate each input returns word 
 
+
+
+
+# Input based on request (chosen template) – function will use input validation to ask each kind of word in order needed for chosen template 
+# return array of words needed in order of the story 
+
+
+
+
+# Get Story (array from input_based_on_story) – function will use array of inputs to create array of sentences based on input of chosen story
 
 
 
@@ -27,30 +24,21 @@ def validate_input():
 
 
 
-
-#Collect words 
-def collect_words(chosen_template):
-    # Look at what the chosen template needs
-    # Ask for each required word
-    # Return the words
-    return words
+#Format Story-- collect unformatted story and creat title + add line breaks and capitalisation to print full story in aesthetic format 
 
 
 
-#build Story  
-def build_story(chosen_template, words):
-    # Insert the words into the template
-    # Return the completed story
-    return story
+
+#Main -- Format all functions together in correct order 
 
 
 
-#Format Story 
-def format_story(story):
-    # Add title, line breaks, capitalisation, etc.
-    # Return final formatted story
-    return formatted_story
 
 
 
-#Main func 
+
+
+
+
+
+
