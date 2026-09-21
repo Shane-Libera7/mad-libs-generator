@@ -57,7 +57,7 @@ def input_validation(prompt):
 # Input based on request (chosen template) – function will use input validation to ask each kind of word in order needed for chosen template 
 # return array of words needed in order of the story 
 def get_words(chosen_template):
-    inputs = []
+    answers = []
     prompts = {}
     if chosen_template == "Superhero Story":
         prompts = {
@@ -108,10 +108,10 @@ def get_words(chosen_template):
 
 
     for prompt in prompts.values():
-        input = input_validation(prompt)
-        inputs.append(input)
+        answer = input_validation(prompt)
+        answers.append(answer)
 
-    words = dict(zip(prompts.keys(), inputs))
+    words = dict(zip(prompts.keys(), answers))
     return words
 
 
@@ -137,7 +137,7 @@ def get_story(words, chosen_template):
                 ===================================
                 Captain {words["name"]} woke up aboard a {words["adjective1"]} spaceship somewhere near the mysterious planet {words["planet"]}. Suddenly, an alarm began to beep. The ship's computer detected a strange {words["noun1"]} approaching at incredible speed.
 
-                Captain {words["name"]} looked out of the window and saw {words["alien_name"]}, a {words["noun2"]} alien floating beside the ship. The alien sent a message warning the crew about a {words["adjective2"]} [space object] heading directly toward them.
+                Captain {words["name"]} looked out of the window and saw {words["alien_name"]}, a {words["noun2"]} alien floating beside the ship. The alien sent a message warning the crew about a {words["adjective2"]} {words["space_object"]} heading directly toward them.
 
                 Captain {words["name"]} decided to {words["verb"]} the ship as quickly as possible. Unfortunately, they accidentally crashed into a giant {words["noun3"]}! Somehow, the crew survived and returned home with the strangest space adventure in history. 
         """
@@ -168,12 +168,12 @@ def get_story(words, chosen_template):
 
 #Main -- Format all functions together in correct order 
 def main():
-    story_template
+    
     chosen_template = story_template()
     words = get_words(chosen_template)
     story = get_story(words, chosen_template)
     print(story)
-    return
+    
 
 
 
