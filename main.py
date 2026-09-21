@@ -148,9 +148,10 @@ def get_words(chosen_template):
 
 # Get Story (array from input_based_on_story) – function will use array of inputs to create array of sentences based on input of chosen story
 def get_story(words, chosen_template):
+    words["title"] = words["title"].upper()
+    story = chosen_template["template"].format_map(words)
     
-    
-    return 
+    return story
 
 
 
